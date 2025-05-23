@@ -1,0 +1,29 @@
+<h2>Table component</h2>
+
+<div>
+  <table>
+    <thead [ngStyle]="headerStyle">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th *ngIf="mostrarEdad">Edad</th>
+        <th *ngIf="mostrarCiudad">Ciudad</th>
+        <th *ngIf="mostrarOcupacion">Ocupación</th>
+        <th *ngIf="mostrarSalario">Salario</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.nombre }}</td>
+        <td *ngIf="mostrarEdad">{{ user.edad }}</td>
+        <td *ngIf="mostrarCiudad">{{ user.ciudad }}</td>
+        <td *ngIf="mostrarOcupacion">{{ user.ocupacion }}</td>
+        <td *ngIf="mostrarSalario">{{ user.salario }}</td>
+        <td>{{ user.estado }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="cambiarEstilo()">Cambiar estilo</button>
+</div>

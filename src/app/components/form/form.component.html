@@ -1,0 +1,38 @@
+<h2>Form component</h2>
+
+<div class="form-container">
+  <form [formGroup]="send" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nombres">Nombres: </label>
+      <input id="nombres" type="text" formControlName="nombres" />
+    </div>
+    <div>
+      <label for="apellidos">Apellidos: </label>
+      <input id="apellidos" type="text" formControlName="apellidos" />
+    </div>
+    <div>
+      <label for="correo">Correo: </label>
+      <input id="correo" type="text" formControlName="correo" />
+    </div>
+    <div>
+      <label for="edad">Edad: </label>
+      <input id="edad" type="number" formControlName="edad" />
+    </div>
+    <div>
+      <label for="ciudad">Ciudad: </label>
+      <input id="ciudad" type="text" formControlName="ciudad" />
+    </div>
+    <div>
+      <label for="ocupacion">Ocupación: </label>
+      <input id="ocupacion" type="text" formControlName="ocupacion" />
+    </div>
+    <div>
+      <label for="salario">Salario: </label>
+      <input id="salario" type="number" formControlName="salario" />
+    </div>
+    <div class="button-container">
+      <button type="submit" [disabled]="send.invalid">Enviar data</button>
+    </div>
+  </form>
+</div>
+

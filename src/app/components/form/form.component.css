@@ -1,0 +1,51 @@
+h2 {
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  height: 100%;
+  padding-bottom: 16px;
+}
+
+div {
+  margin-bottom: 16px;
+}
+
+input {
+  width: 85vw;
+}
+
+form label {
+  font-weight: bold;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin-top: 4px;
+  font-size: medium;
+  padding: 8px 16px;
+  border-radius: 15px;
+  border: none;
+  background-color: white;
+}
+
+@media screen and (min-width: 650px) {
+  form {
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    width: 100%;
+    justify-content: space-around;
+  }
+  input {
+    width: 90%;
+  }
+}
