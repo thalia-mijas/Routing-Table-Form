@@ -16,8 +16,8 @@ import {
 export class FormComponent {
   send: FormGroup;
 
-  constructor(private sendBuiler: FormBuilder) {
-    this.send = this.sendBuiler.group({
+  constructor(private sendBuilder: FormBuilder) {
+    this.send = this.sendBuilder.group({
       nombres: ['', [Validators.required]],
       apellidos: ['', [Validators.required]],
       correo: ['', [Validators.required, Validators.email]],
